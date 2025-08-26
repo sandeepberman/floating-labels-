@@ -1,56 +1,72 @@
+/* Basic Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
+/* Body styling */
 body {
-    font-family: Poppins, sans-serif;
-background: rgb(146 117 117 / 56%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 0 10px;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f0f4f8;
 }
 
+/* Input group container */
 .input-group {
-    margin: 20px 0;
-    position: relative;
+  position: relative;
+  margin: 20px 0;
+  width: 250px;
 }
 
-.input-group label {
-    position: absolute;
-    transform: translateY(-50%);
-    top: 50%;
-    left: 15px;
-    color: white;
-    font-size: 18px;
-    pointer-events: none;
-    padding: 0 5px;
-    transition: .5s;
-}
-
+/* Input styling */
 .input-group input {
-    width: 300px;
-    height: 50px;
-    background: transparent;
-    border: none;
-    outline: 1.2px solid black;
-    border-radius: 5px;
-    padding: 0 15px;
-    font-size: 18px;
-    color: black;
-    transition: .5s;
+  width: 100%;
+  padding: 12px 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: white;
 }
 
-.input-group input:focus~label,
-.input-group input:valid~label {
-    top: 0;
-    left: 10px;
-    font-size: 14px;
-    color: rgb(255 255 255 / 80%);
-    ;
+/* Focus effect */
+.input-group input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 4px 8px rgba(79, 70, 229, 0.2);
+}
+
+/* Label styling */
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  background-color: white;
+  padding: 0 5px;
+  color: #999;
+  pointer-events: none;
+  transition: 0.3s ease all;
+}
+
+/* Floating effect */
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: -10px;
+  font-size: 12px;
+  color: #4f46e5;
+}
+
+/* Optional: Password field show/hide toggle */
+.input-group input[type="password"] {
+  letter-spacing: 0.1em;
+}
+
+/* Smooth hover/focus effects */
+.input-group input:hover {
+  border-color: #7c3aed;
 }
