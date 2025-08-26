@@ -3,7 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: Poppins, sans-serif; /* removed quotes to satisfy Stylelint */
 }
 
 /* Body styling */
@@ -37,7 +37,7 @@ body {
 /* Focus effect */
 .input-group input:focus {
   border-color: #4f46e5;
-  box-shadow: 0 4px 8px rgba(79, 70, 229, 0.2);
+  box-shadow: 0 4px 8px rgb(79 70 229 / 20%); /* modern rgb() with alpha */
 }
 
 /* Label styling */
@@ -62,7 +62,7 @@ body {
 }
 
 /* Optional: Password field show/hide toggle */
-.input-group input[type="password"] {
+.input-group input[type=password] {
   letter-spacing: 0.1em;
 }
 
@@ -70,3 +70,4 @@ body {
 .input-group input:hover {
   border-color: #7c3aed;
 }
+
