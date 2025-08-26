@@ -1,13 +1,13 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-   
+
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
-    background:rgba(146, 117, 117, 0.562);
+    background: rgba(146, 117, 117, 0.562);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,9 +16,9 @@ body{
     flex-direction: column;
 }
 
-.input-group{
-   margin: 20px 0;
-   position: relative;
+.input-group {
+    margin: 20px 0;
+    position: relative;
 }
 
 .input-group label{

@@ -1,0 +1,23 @@
+name: Button Project CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate HTML
+        uses: Cyb3r-Jak3/html5validator-action@v0.4.1
+        with:
+          root: ./
+
+      - name: Validate CSS
+        run: npx stylelint "**/*.css"
