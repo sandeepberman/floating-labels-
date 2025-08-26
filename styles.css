@@ -1,74 +1,81 @@
+
 /* Basic Reset */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Poppins, sans-serif;
-    /* removed quotes to satisfy Stylelint */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif; /* removed quotes */
 }
+
 
 /* Body styling */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f0f4f8;
 }
+
 
 /* Input group container */
 .input-group {
-    position: relative;
-    margin: 20px 0;
-    width: 250px;
+  position: relative;
+  margin: 20px 0;
+  width: 250px;
 }
+
 
 /* Input styling */
 .input-group input {
-    width: 100%;
-    padding: 12px 10px;
-    font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    outline: none;
-    transition: all 0.3s ease;
-    background-color: white;
+  width: 100%;
+  padding: 12px 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: white;
 }
+
 
 /* Focus effect */
 .input-group input:focus {
-    border-color: #4f46e5;
-    box-shadow: 0 4px 8px rgb(79 70 229 / 20%);
-    /* modern rgb() with alpha */
+  border-color: #4f46e5;
+  box-shadow: 0 4px 8px rgb(79 70 229 / 20%); /* modern rgb() with alpha */
 }
+
 
 /* Label styling */
 .input-group label {
-    position: absolute;
-    top: 50%;
-    left: 12px;
-    transform: translateY(-50%);
-    background-color: white;
-    padding: 0 5px;
-    color: #999;
-    pointer-events: none;
-    transition: 0.3s ease all;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  background-color: white;
+  padding: 0 5px;
+  color: #999;
+  pointer-events: none;
+  transition: 0.3s ease all;
 }
 
+
 /* Floating effect */
-.input-group input:focus+label,
-.input-group input:not(:placeholder-shown)+label {
-    top: -10px;
-    font-size: 12px;
-    color: #4f46e5;
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: -10px;
+  font-size: 12px;
+  color: #4f46e5;
 }
+
 
 /* Optional: Password field show/hide toggle */
 .input-group input[type="password"] {
-    letter-spacing: 0.1em;
+  letter-spacing: 0.1em;
 }
+
 
 /* Smooth hover/focus effects */
 .input-group input:hover {
-    border-color: #7c3aed;
+  border-color: #7c3aed;
 }
